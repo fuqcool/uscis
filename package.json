@@ -1,0 +1,8 @@
+{
+  "name": "mycase",
+  "version": "0.0.0",
+  "dependencies": {
+    "jsdom": "^7.2.2",
+    "request": "^2.67.0"
+  }
+}
