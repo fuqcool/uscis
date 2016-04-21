@@ -1,8 +1,20 @@
 {
   "name": "mycase",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "bin": "./bin/mycase",
+  "main": "./lib/case-status",
   "dependencies": {
+    "colors": "^1.1.2",
     "jsdom": "^7.2.2",
+    "minimist": "^1.2.0",
     "request": "^2.67.0"
-  }
+  },
+  "keywords": [
+    "USCIS",
+    "H1B",
+    "OPT",
+    "status",
+    "query",
+    "case"
+  ]
 }

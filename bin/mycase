@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+
+'use strict'
+
+const argv = require('minimist')(process.argv.slice(2))
+const colors = require('colors')
+const caseStatus = require('../lib/case-status')
+const pkg = require('../package')
+
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0'
+
+console.log(`${pkg.name} v${pkg.version}\n`)
+
+const cases = argv._
+
+Promise.all(cases.map((c) => caseStatus(c)))
+  .then((statusList) => {
+
+    statusList.forEach((status, i) => {
+      console.log(cases[i].green)
+      console.log('=> ' + `${status.title}`.blue.bold)
+      console.log(`=> ${status.details}`)
+
+      if (i !== statusList.length - 1) {
+        console.log()
+      }
+    })
+
+  }).catch((err) => {
+    console.log(err.message.red)
+  })
