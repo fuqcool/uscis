@@ -1,7 +1,7 @@
 {
-  "name": "mycase",
+  "name": "uscis",
   "version": "0.0.1",
-  "bin": "./bin/mycase",
+  "bin": "./bin/uscis",
   "main": "./lib/case-status",
   "dependencies": {
     "colors": "^1.1.2",
