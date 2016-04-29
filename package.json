@@ -17,5 +17,10 @@
     "status",
     "query",
     "case"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fuqcool/uscis.git"
+  },
+  "license": "MIT"
 }

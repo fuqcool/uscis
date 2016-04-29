@@ -21,7 +21,13 @@ npm install uscis --save
 uscis EACXXXXXXXXXX
 ```
 
-#### Node Module 
+Alternatively, save all the receipt numbers you want to query in a file(separate by space or new line), then
+
+```
+uscis $(cat /PATH/TO/CASES)
+```
+
+#### Node Module
 
 ```javascript
 const uscis = require('uscis')
