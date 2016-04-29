@@ -1,6 +1,7 @@
 {
   "name": "uscis",
   "version": "0.0.1",
+  "description": "Query your USCIS case status",
   "bin": "./bin/uscis",
   "main": "./lib/case-status",
   "dependencies": {

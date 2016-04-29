@@ -1,5 +1,5 @@
 # USCIS
-Query your USCIS case status in command line.
+Query your USCIS case status.
 
 ## Install
 
@@ -7,16 +7,26 @@ Query your USCIS case status in command line.
 npm install -g uscis
 ```
 
+If you want to use it as node module
+
+```
+npm install uscis --save
+```
+
 ### Usage
+
+#### Command Line
 
 ```
 uscis EACXXXXXXXXXX
 ```
 
-```javascript
-const case = require('uscis')
+#### Node Module 
 
-case('EACXXXXXXXXXX').then((status) => {
+```javascript
+const uscis = require('uscis')
+
+uscis('EACXXXXXXXXXX').then((status) => {
   console.log(status.title)
   console.log(status.details)
 })
