@@ -13,12 +13,12 @@ If you want to use it as node module
 npm install uscis --save
 ```
 
-### Usage
+## Usage
 
-#### Command Line
+### Command Line
 
 ```
-uscis EACXXXXXXXXXX
+uscis EACXXXXXXXXXX EACYYYYYYYYYY
 ```
 
 Alternatively, save all the receipt numbers you want to query in a file(separate by space or new line), then
@@ -27,7 +27,7 @@ Alternatively, save all the receipt numbers you want to query in a file(separate
 uscis $(cat /PATH/TO/CASES)
 ```
 
-#### Node Module
+### Node Module
 
 ```javascript
 const uscis = require('uscis')
@@ -37,3 +37,7 @@ uscis('EACXXXXXXXXXX').then((status) => {
   console.log(status.details)
 })
 ```
+
+## License
+
+MIT
