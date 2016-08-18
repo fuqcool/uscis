@@ -24,6 +24,8 @@ Promise.all(cases.map((c) => caseStatus(c)))
       }
     })
 
+  }, (err) => {
+    console.log(err.message.red)
   }).catch((err) => {
     console.log(err.message.red)
   })
