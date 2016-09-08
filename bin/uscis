@@ -11,19 +11,26 @@ console.log(`${pkg.name} v${pkg.version}\n`)
 
 const cases = argv._
 
-Promise.all(cases.map((c) => caseStatus(c)))
-  .then((statusList) => {
+Promise
+  .all(cases.map(c => (
+    caseStatus(c).catch((err) => err)
+  )))
 
+  .then(statusList => {
     statusList.forEach((status, i) => {
       console.log(cases[i].green)
-      console.log('=> ' + `${status.title}`.blue.bold)
-      console.log(`=> ${status.details}`)
+
+      if (!(status instanceof Error)) {
+        console.log('=> ' + status.title.blue.bold)
+        console.log(`=> ${status.details}`)
+      } else {
+        console.log(`Error: ${status.message}`.red)
+      }
 
       if (i !== statusList.length - 1) {
         console.log()
       }
     })
-
-  }).catch((err) => {
-    console.log(err.message.red)
   })
+
+  .catch(err => console.log(err.message.red))
