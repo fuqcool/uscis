@@ -1,6 +1,6 @@
 {
   "name": "uscis",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Query your USCIS case status",
   "bin": "./bin/uscis",
   "main": "./lib/case-status",
